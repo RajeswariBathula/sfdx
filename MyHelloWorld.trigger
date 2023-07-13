@@ -1,6 +1,6 @@
-trigger helloWorldAccountTrigger on Account (before insert) {
+trigger testpoc on Account (before insert) {
+    for(Account acc : Trigger.new){
+        acc.Phone = '9976373555';
+    }
 
-  Account[] accs = Trigger.new;
-
-   MyHelloWorld.addHelloWorld(accs);
 }
